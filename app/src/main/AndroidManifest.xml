@@ -12,7 +12,13 @@
         android:theme="@style/Theme.AndroidEResstaurant"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".LauchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Entree"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

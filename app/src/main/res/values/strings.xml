@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidEResstaurant</string>
+    <string name="slogan">Grab a taste of perfection to-go!</string>
+    <string name="button_entree">Entree</string>
+    <string name="button_meal">Meal</string>
+    <string name="button_dessert">Dessert</string>
+    <string name="home_title">HUNGRY Man</string>
+</resources>

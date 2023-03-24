@@ -19,13 +19,13 @@ class LauchActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
 
     private lateinit var binding: ActivityLauchBinding
-    private lateinit var categoryTitle:  String
+    //private lateinit var categoryTitle:  String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLauchBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        categoryTitle = intent.getStringExtra("menu") ?: ""
+        val categoryTitle = intent.getStringExtra("menu") ?: ""
 
         val dishes = resources.getStringArray(R.array.dishes).toList() as ArrayList
         binding.RecyclerView.layoutManager = LinearLayoutManager(this)
@@ -36,12 +36,12 @@ class LauchActivity : AppCompatActivity() {
         }
 
 
-        fetchMenuItems()
+        fetchMenuItems(categoryTitle)
 
     }
 
 
-    private fun fetchMenuItems() {
+    private fun fetchMenuItems(categoryTitle:  String) {
         val url = "http://test.api.catering.bluecodegames.com/menu"
         val requestBody = JSONObject().apply {
             put("id_shop", 1)

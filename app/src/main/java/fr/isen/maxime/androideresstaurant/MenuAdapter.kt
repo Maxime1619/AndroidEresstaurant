@@ -16,6 +16,8 @@ class MenuAdapter(private var dishes: ArrayList<Items>, val onDishClickListener 
     class LauchViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val dishName = view.findViewById<TextView>(R.id.dishName)
         val dickpic = view.findViewById<ImageView>(R.id.dickPic)
+        val dishPrice = view.findViewById<TextView>(R.id.dishPrice)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LauchViewHolder {
@@ -28,19 +30,19 @@ class MenuAdapter(private var dishes: ArrayList<Items>, val onDishClickListener 
     override fun onBindViewHolder(holder: LauchViewHolder, position: Int) {
         val dish = dishes[position]
         holder.dishName.text = dish.nameFr
+        val price = dish.prices.minByOrNull { it.price?.toDoubleOrNull()!! ?: Double.MAX_VALUE}
+        holder.dishPrice.text = "€${price?.price}"
 
         holder.itemView.setOnClickListener {
             onDishClickListener(dish)
         }
         //ajout de l'image
-        val menuItem = dishes[position]
-
         val imageURL = dishes[position].images.firstOrNull()
         if (!imageURL.isNullOrEmpty()){
             Picasso.get().load(imageURL).into(holder.dickpic)
-        }else {
-            //mettre image par dég
         }
+
+
     }
 
     fun updateDishes(dishesFromAPI: ArrayList<Items>){

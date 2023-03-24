@@ -44,10 +44,6 @@ class MenuAdapter(private var dishes: ArrayList<Items>, val onDishClickListener 
         if (!imageURL.isNullOrEmpty()){
             Picasso.get().load(imageURL).into(holder.dickpic)
         }
-
-
-
-
     }
 
     fun updateDishes(dishesFromAPI: ArrayList<Items>){

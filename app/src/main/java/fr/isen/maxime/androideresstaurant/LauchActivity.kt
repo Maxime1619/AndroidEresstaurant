@@ -27,7 +27,7 @@ class LauchActivity : AppCompatActivity() {
 
         val categoryTitle = intent.getStringExtra("menu") ?: ""
 
-        val dishes = resources.getStringArray(R.array.dishes).toList() as ArrayList
+        //val dishes = resources.getStringArray(R.array.dishes).toList() as ArrayList
         binding.RecyclerView.layoutManager = LinearLayoutManager(this)
         binding.RecyclerView.adapter = MenuAdapter(arrayListOf()){
             val intent = Intent(this, DetailActivity::class.java) //page de base vers nouvelle

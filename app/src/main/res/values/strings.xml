@@ -7,5 +7,23 @@
     <string name="button_deli_meats">Deli Meats</string>
     <string name="button_salad">Caesar Salad</string>
     <string name="home_title">HUNGRY Man</string>
+    <string-array name="entrees">
+        <item>Caesar Salad</item>
+        <item>Deli Meats</item>
+    </string-array>
+    <string-array name="dishes">
+        <item>Fried chicken</item>
+        <item>Burger</item>
+        <item>Raw chicken</item>
+        <item>Chicken burger</item>
+        <item>Alive chicken</item>
+        <item>Big burger</item>
+        <item>Hot fried chicken</item>
+        <item>Chicken tenders</item>
+    </string-array>
+    <string-array name="desserts">
+        <item>Apple pie</item>
+        <item>Cheesecake</item>
+    </string-array>
 
 </resources>

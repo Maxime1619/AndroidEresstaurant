@@ -3,9 +3,9 @@ package fr.isen.maxime.androideresstaurant
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class Entree : AppCompatActivity() {
+class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_entree)
+        setContentView(R.layout.activity_detail)
     }
 }

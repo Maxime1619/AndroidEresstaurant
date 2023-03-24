@@ -22,56 +22,23 @@ class HomeActivity : AppCompatActivity() {//activity represente les differentes 
         binding.buttonEntree.setOnClickListener {
             Log.d("MainActivity","button_entree")//même chose que println
             val intent = Intent(this, LauchActivity::class.java) //page de base vers nouvelle
-            intent.putExtra("menu", "entree")//faire passer en parametre
+            intent.putExtra("menu", "Entrées")//faire passer en parametre
             startActivity(intent)//lancer la page
             Toast.makeText(this, "Your are in the Entree menu", Toast.LENGTH_SHORT).show()
         }
 
         binding.buttonMeal.setOnClickListener {
             val intent = Intent(this, LauchActivity::class.java)
-            intent.putExtra("menu", "meal")
+            intent.putExtra("menu", "Plats")
             startActivity(intent)
             Toast.makeText(this, "Your are in the Meal menu", Toast.LENGTH_SHORT).show()
         }
 
         binding.buttonDessert.setOnClickListener {
             val intent = Intent(this, LauchActivity::class.java)
-            intent.putExtra("menu", "dessert")
+            intent.putExtra("menu", "Desserts")
             startActivity(intent)
             Toast.makeText(this, "Your are in the Dessert menu", Toast.LENGTH_SHORT).show()
         }
     }
-
-
-
-
-    /*fun buttonClicked(view: View){
-
-
-
-        when (view.id) {
-            R.id.button_entree -> {
-                val intent = Intent(this, LauchActivity::class.java)
-                intent.putExtra("menu", "entree")
-                startActivity(intent)
-                Toast.makeText(this, "Your are in the Entree menu", Toast.LENGTH_SHORT).show()
-            }
-            R.id.button_meal -> {
-                val intent = Intent(this, LauchActivity::class.java)
-                intent.putExtra("menu", "meal")
-                startActivity(intent)
-                Toast.makeText(this, "Your are in the Meal menu", Toast.LENGTH_SHORT).show()
-            }
-            R.id.button_dessert -> {
-                val intent = Intent(this, LauchActivity::class.java)
-                intent.putExtra("menu", "dessert")
-                startActivity(intent)
-                Toast.makeText(this, "Your are in the Dessert menu", Toast.LENGTH_SHORT).show()
-            }
-        }
-
-
-    }*/
-
-
 }

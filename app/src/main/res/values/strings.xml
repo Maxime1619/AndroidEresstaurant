@@ -6,6 +6,8 @@
     <string name="button_dessert">Dessert</string>
     <string name="button_m">-</string>
     <string name="button_p">+</string>
+    <string name="ingredientTitle">Ingrédients :</string>
+
 
     <string name="home_title">HUNGRY Man</string>
     <string-array name="entrees">

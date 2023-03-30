@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -55,7 +56,26 @@ class DetailActivity : AppCompatActivity() {
         findViewById<Button>(R.id.addToCard).setOnClickListener {
             cardNb += itemCounter
             findViewById<TextView>(R.id.cardNumber).text = cardNb.toString()
-        }
+
+            if(itemCounter != 0) {
+
+                val message =
+                    "$itemCounter x ${itemFromLauchActivity.nameFr} ajouté(s) au panier. Total: $totalPrice €"
+                AlertDialog.Builder(this)
+                    .setTitle("Ajout au panier")
+                    .setMessage(message)
+                    .setPositiveButton("OK", null)
+                    .show()
+            }else {
+                val message =
+                    "Aucun plat à ajouter !"
+                AlertDialog.Builder(this)
+                    .setTitle("Ajout au panier")
+                    .setMessage(message)
+                    .setPositiveButton("OK", null)
+                    .show()
+            }
+    }
 
 
         //Construit la liste d'ingrédients
